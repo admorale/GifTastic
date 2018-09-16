@@ -65,7 +65,7 @@ $("#searchAnimal").on("click", function(){
             for (i=0; i<responses.length;i++){
                 $("#topicGif").append("<div class ='gifRepo' id='"+animalName+i+"'></div>");
                 $("#"+animalName+i).append("<p> Rating: "+responses[i].rating)+"</p>";
-                $("#"+animalName+i).append("<img src="+responses[i].images.fixed_width_still.url+" data-still='"+responses[i].images.fixed_width_still.url+"' data-animate='"+responses[i].images.fixed_width.url+"' data-state='still' class='gif'>");
+                $("#"+animalName+i).append("<img src="+responses[i].images.fixed_height_still.url+" data-still='"+responses[i].images.fixed_height_still.url+"' data-animate='"+responses[i].images.fixed_height.url+"' data-state='still' class='gif'>");
             }
             // Adding event listener to the dinamically created GIFs 
             $(".gif").on("click", function(event) {
