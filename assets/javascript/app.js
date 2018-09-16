@@ -15,7 +15,7 @@ $(".topicBtn").on("click", function(event) {
     function addEventToBtn() {
     $("#topicGif").empty();
     var topicValue = event.target.id;
-    var URL = "http://api.giphy.com/v1/gifs/search?q="+topicValue+"&limit=10&api_key=ePH8hUjeUvUmm5FngErya18PPS3yvnKZ"
+    var URL = "https://api.giphy.com/v1/gifs/search?q="+topicValue+"&limit=10&api_key=ePH8hUjeUvUmm5FngErya18PPS3yvnKZ"
     $.ajax({
         url: URL,
         method: "GET",
@@ -54,7 +54,7 @@ $("#searchAnimal").on("click", function(){
         function addEventToBtn() {
         $("#topicGif").empty();
         var topicValue = event.target.id;
-        var URL = "http://api.giphy.com/v1/gifs/search?q="+topicValue+"&limit=10&api_key=ePH8hUjeUvUmm5FngErya18PPS3yvnKZ"
+        var URL = "https://api.giphy.com/v1/gifs/search?q="+topicValue+"&limit=10&api_key=ePH8hUjeUvUmm5FngErya18PPS3yvnKZ"
         $.ajax({
             url: URL,
             method: "GET",
