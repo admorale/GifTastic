@@ -13,6 +13,12 @@ body {
 .topicBtn:focus {
     background: olive;
 }
+.topicSearchBtn {
+    background: teal;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
 #topicGif {
     width: 75%;
     max-width: 66%;
