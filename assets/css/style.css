@@ -3,6 +3,7 @@ body {
 }
 #topics {
     margin-bottom: 12px;
+    height: 50px;
 }
 .topicBtn {
     background: teal;
@@ -20,15 +21,16 @@ body {
     font-size: 14px;
 }
 #topicGif {
-    width: 75%;
+    width: 80%;
     max-width: 66%;
     display: inline-block;
     min-height: 500px;
 }
 #searchGif {
     display:inline-block;
-    width: 25%;
+    width: 20%;
     float: right;
+    margin: 5px;
 }
 #searchTopic {
     
@@ -36,4 +38,7 @@ body {
 .gifRepo {
     display: inline-block;
     margin: 5px;
+}
+h1, h5 {
+    text-align: center;
 }
