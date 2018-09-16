@@ -5,13 +5,16 @@ body {
     margin-bottom: 12px;
     height: 50px;
 }
-.topicBtn {
+.topicBtn, .newTopicBtn {
     background: teal;
     color: white;
     border-radius: 5px;
     font-size: 14px;
 }
-.topicBtn:focus {
+.topicBtn:hover, .newTopicBtn:hover {
+    background: olive;
+} 
+.topicBtn:focus, .newTopicBtn:focus {
     background: olive;
 }
 .topicSearchBtn {

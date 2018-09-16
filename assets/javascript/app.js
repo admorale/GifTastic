@@ -46,11 +46,11 @@ $(".topicBtn").on("click", function(event) {
 // Create new animal buttons
 $("#searchAnimal").on("click", function(){
     var topicValue = $("#searchTopic").val();
-    $("#topics").append("<button class='topicBtn' id="+topicValue+">"+topicValue+"</button>");
+    $("#topics").append("<button class='newTopicBtn' id="+topicValue+">"+topicValue+"</button>");
     $("#searchTopic").val("");
     animals.push(topicValue);
     // Adding click event listener to the new buttons
-    $(".topicBtn").on("click", function(event) {
+    $(".newTopicBtn").on("click", function(event) {
         function addEventToBtn() {
         $("#topicGif").empty();
         var topicValue = event.target.id;
