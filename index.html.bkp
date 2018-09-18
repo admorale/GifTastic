@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+	<html> 
+	<head>  
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GifTastic</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Linking CSS --> 
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+	</head> 
+	<body> 
+	<div>
+		<h1>Dynamic GIF Generator</h1>
+		<h5>Click on a button to generate GIFs related to the animal selected</h2>
+		<h5>Add additional animals to the button selection using the input section on the right</h2>
+	</div>
+    <div id="topics">
+    </div>
+    <div id="topicGif">
+   
+    </div>
+    <div id="searchGif">
+        Add an Animal:<br>
+        <input class="box" type="text" name="search" id="searchTopic" placeholder="Animal name">
+        <br>
+        <button class='topicSearchBtn' id="searchAnimal">Submit</button>
+    </div>
+
+	<!-- Linking our JavaScript file at the end of body -->
+	<script type="text/javascript" src="assets/javascript/app.js"> </script>
+	</body> 
+	</html>

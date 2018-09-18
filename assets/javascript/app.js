@@ -11,7 +11,7 @@ for (i=0; i < animals.length; i++) {
 initialLoad();
 
 // Generating GIFs from animal buttons
-$(".topicBtn").on("click", function(event) {    
+$(document).on("click", ".topicBtn", function(event) {    
     function addEventToBtn() {
     $("#topicGif").empty();
     var topicValue = event.target.id;
@@ -37,8 +37,8 @@ $(".topicBtn").on("click", function(event) {
                $(this).attr("src", $(this).attr("data-still"));
               $(this).attr("data-state", "still");
             }
-          });
-          // End of section - Adding event listener to new dinamically generated GIFs 
+        });
+        // End of section - Adding event listener to new dinamically generated GIFs 
     }
       )}
       addEventToBtn();
@@ -46,43 +46,8 @@ $(".topicBtn").on("click", function(event) {
 // Create new animal buttons
 $("#searchAnimal").on("click", function(){
     var topicValue = $("#searchTopic").val();
-    $("#topics").append("<button class='newTopicBtn' id="+topicValue+">"+topicValue+"</button>");
+    $("#topics").append("<button class='topicBtn' id="+topicValue+">"+topicValue+"</button>");
     $("#searchTopic").val("");
     animals.push(topicValue);
-    // Adding click event listener to the new buttons
-    $(".newTopicBtn").on("click", function(event) {
-        function addEventToBtn() {
-        $("#topicGif").empty();
-        var topicValue = event.target.id;
-        var URL = "https://api.giphy.com/v1/gifs/search?q="+topicValue+"&limit=10&api_key=ePH8hUjeUvUmm5FngErya18PPS3yvnKZ"
-        $.ajax({
-            url: URL,
-            method: "GET",
-            //data: {"api-key":"688ebf136fc34c92aa7ab402ce7123df", 'q': searchTerm, 'begin_date': startDate, 'end_date': endDate,"sort":"newest"}
-          }).then(function(resp) {
-            responses=resp.data;
-            var animalName = "GIF"+topicValue;
-            for (i=0; i<responses.length;i++){
-                $("#topicGif").append("<div class ='gifRepo' id='"+animalName+i+"'></div>");
-                $("#"+animalName+i).append("<p> Rating: "+responses[i].rating)+"</p>";
-                $("#"+animalName+i).append("<img src="+responses[i].images.fixed_height_still.url+" data-still='"+responses[i].images.fixed_height_still.url+"' data-animate='"+responses[i].images.fixed_height.url+"' data-state='still' class='gif'>");
-            }
-            // Adding event listener to the dinamically created GIFs 
-            $(".gif").on("click", function(event) {
-            var state = $(this).attr("data-state");
-            if (state === "still") {
-            $(this).attr("src", $(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-            } else {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-            }
-            });
-            // End of section - Adding event listener to new dinamically generated GIFs   
-        }
-          )}
-          addEventToBtn();
-    })
-
 })
 
